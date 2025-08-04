@@ -20,6 +20,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
     .header-page h1 {
       margin: 0;
@@ -27,6 +28,10 @@
       color: #2962ff;
       text-align: center;
       flex-grow: 1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
     }
     .btn-back {
       padding: 0.7rem 1.5rem;
@@ -84,6 +89,22 @@
       margin-bottom: 0.5rem;
       color: #333;
     }
+    
+    /* Estilos para nova seção */
+    .related-info:first-of-type {
+      background: linear-gradient(135deg, #8e24aa, #42a5f5);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, #8e24aa, #42a5f5);
+      margin: 2rem 0;
+    }
   </style>
 </head>
 <body>
@@ -95,6 +116,44 @@
   </div>
 
   <div class="container-updates">
+    <!-- NOVA ATUALIZAÇÃO - SISTEMA DE DETALHAMENTOS -->
+    <p class="related-info">
+      <span role="img" aria-label="chart-emoji">📊</span> NOVO: Sistema de Detalhamentos
+    </p>
+    <p class="version">Versão: 0.2.0</p>
+
+    <h2>🎉 Nova Funcionalidade Implementada:</h2>
+    <ul>
+      <li>
+        <strong>Botão "Detalhamentos" adicionado</strong> - Acesso direto ao sistema de detalhamentos de cobrança do GDF Saúde
+      </li>
+      <li>
+        <strong>Sistema de redirecionamento inteligente</strong> - Página intermediária que garante acesso confiável ao Google Apps Script
+      </li>
+      <li>
+        <strong>Interface responsiva</strong> - Botão integrado harmoniosamente com o design existente
+      </li>
+      <li>
+        <strong>Fallback automático</strong> - Se o redirecionamento automático falhar, usuário pode clicar manualmente
+      </li>
+    </ul>
+
+    <h3>🔧 Solução Técnica Implementada:</h3>
+    <ul>
+      <li>
+        <strong>Página intermediária (detalhamentos.html)</strong> - Redirecionamento automático após 2 segundos
+      </li>
+      <li>
+        <strong>Compatibilidade garantida</strong> - Funciona em todos os navegadores, mesmo com restrições de segurança
+      </li>
+      <li>
+        <strong>Experiência do usuário otimizada</strong> - Tela de carregamento elegante com spinner animado
+      </li>
+    </ul>
+
+    <hr>
+
+    <!-- ATUALIZAÇÕES ANTERIORES -->
     <p class="related-info">
       <span role="img" aria-label="hospital-emoji">🏥</span> Relacionado ao Rede Credenciada
     </p>
@@ -113,10 +172,10 @@
     <h3>Próximos Updates:</h3>
     <ul>
       <li>
-        Em breve será possível acessar os detalhamentos de cobrança direto do HUB.
+        ✅ <strong>CONCLUÍDO:</strong> Sistema de detalhamentos integrado ao HUB
       </li>
       <li>
-        Para facilitar o uso, terá um botão para ir direto ao sistema do nosso colega Lucas Araujo.
+        ✅ <strong>CONCLUÍDO:</strong> Botão direto para o sistema implementado
       </li>
     </ul>
     

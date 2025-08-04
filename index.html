@@ -42,11 +42,20 @@
       line-height: 1.6;
     }
     .btns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       margin-top: 2rem;
+      max-width: 800px;
+      width: 100%;
+    }
+    
+    /* Responsividade para telas menores */
+    @media (max-width: 768px) {
+      .btns {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
     }
     .btn {
       padding: 1.2rem 2.5rem;
@@ -66,10 +75,13 @@
       background: linear-gradient(to right, #2962ff, #ffab00);
     }
     .btn.gerador-carteirinha {
-      background: linear-gradient(to right, #2962ff, #00c853);
+      background: linear-gradient(to right, #2962ff, #0300c8);
     }
     .btn.update-fix {
       background: linear-gradient(to right, #6a11cb, #2575fc);
+    }
+    .btn.detalhamentos {
+      background: linear-gradient(to right, #2196f3, #4caf50);
     }
     .btn span {
       margin-right: 0.5rem;
@@ -81,6 +93,8 @@
       border-top: 2px solid #ccc;
       color: #666;
     }
+    
+
   </style>
 </head>
 <body>
@@ -93,17 +107,20 @@
     <p>
       Bem-vindo à página de projetos. Abaixo, você encontra os links para as minhas aplicações desenvolvidas para o GDF Saúde.
     </p>
-    <div class="btns">
-      <a href="https://rafaelbrdc24.github.io/Rede-Credenciada-GDF/" class="btn rede-credenciada">
-        <span role="img" aria-label="hospital-emoji">🏥</span> Rede Credenciada
-      </a>
-      <a href="https://rafaelbrdc24.github.io/gerador-carteirinha-gdf/" class="btn gerador-carteirinha">
-        <span role="img" aria-label="card-emoji">💳</span> Gerador de Carteirinha
-      </a>
-      <a href="updates.html" class="btn update-fix">
-        <span role="img" aria-label="tools-emoji">🛠️</span> Update e Fix
-      </a>
-    </div>
+         <div class="btns">
+       <a href="https://rafaelbrdc24.github.io/Rede-Credenciada-GDF/" class="btn rede-credenciada">
+         <span role="img" aria-label="hospital-emoji">🏥</span> Rede Credenciada
+       </a>
+       <a href="https://rafaelbrdc24.github.io/gerador-carteirinha-gdf/" class="btn gerador-carteirinha">
+         <span role="img" aria-label="card-emoji">💳</span> Gerador de Carteirinha
+       </a>
+       <a href="detalhamentos.html" class="btn detalhamentos">
+         <span role="img" aria-label="chart-emoji">📊</span> Detalhamentos
+       </a>
+       <a href="updates.html" class="btn update-fix">
+         <span role="img" aria-label="tools-emoji">🛠️</span> Update e Fix
+       </a>
+     </div>
   </div>
 
   <footer>
